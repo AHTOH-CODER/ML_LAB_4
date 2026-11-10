@@ -1,0 +1,11 @@
+.venv
+mlflow-data
+__pycache__
+*.pyc
+screenshots
+logs
+data
+sample_request.json
+expected_predictions.json
+test_metrics.json
+runs.json

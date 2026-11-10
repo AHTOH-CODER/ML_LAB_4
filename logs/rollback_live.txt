@@ -1,0 +1,34 @@
+docker compose stop
+ Container ml_lab_4-digits-api-1 Stopping 
+ Container ml_lab_4-digits-api-1 Stopped 
+exit 0
+docker run -d --name digits-api -p 127.0.0.1:8000:8000 digits-api:v2
+1394fb60591513fb11ca23cc4c735a63b0b51d0cf0fe244ce728de3575f516ae
+exit 0
+GET /health {"status":"ok","model_version":"2"}
+POST /predict HTTP 200 predictions [5, 2, 8, 8, 7] version 2
+docker stop digits-api
+digits-api
+exit 0
+docker rm digits-api
+digits-api
+exit 0
+docker run -d --name digits-api -p 127.0.0.1:8000:8000 digits-api:v1
+9ec06d755cf963706f66db19af0ad609a618db383a1522bea7d8d24a3e554b40
+exit 0
+GET /health {"status":"ok","model_version":"1"}
+POST /predict HTTP 200 predictions [5, 2, 8, 1, 7] version 1
+python src\check_api.py http://127.0.0.1:8000
+PREDICTIONS [5, 2, 8, 1, 7]
+VERSION 1
+CHECK_API_PASS
+docker stop digits-api
+digits-api
+exit 0
+docker rm digits-api
+digits-api
+exit 0
+docker compose start
+ Container ml_lab_4-digits-api-1 Starting 
+ Container ml_lab_4-digits-api-1 Started 
+exit 0

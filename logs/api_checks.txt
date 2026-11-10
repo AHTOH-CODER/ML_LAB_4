@@ -1,0 +1,45 @@
+=== GET /health ===
+HTTP 200
+{"status":"ok","model_version":"1"}
+
+=== GET /metadata ===
+HTTP 200
+{"model_name":"digits-classifier","model_version":"1","run_id":"6829c152c3d94f1f8ef146a59863d680","run_name":"rf-200x12-leaf1","alias":"champion","features":["pixel_00","pixel_01","pixel_02","pixel_03","pixel_04","pixel_05","pixel_06","pixel_07","pixel_08","pixel_09","pixel_10","pixel_11","pixel_12","pixel_13","pixel_14","pixel_15","pixel_16","pixel_17","pixel_18","pixel_19","pixel_20","pixel_21","pixel_22","pixel_23","pixel_24","pixel_25","pixel_26","pixel_27","pixel_28","pixel_29","pixel_30","pixel_31","pixel_32","pixel_33","pixel_34","pixel_35","pixel_36","pixel_37","pixel_38","pixel_39","pixel_40","pixel_41","pixel_42","pixel_43","pixel_44","pixel_45","pixel_46","pixel_47","pixel_48","pi...
+
+=== POST /predict sample ===
+HTTP 200
+{"predictions":[5,2,8,1,7],"class_names":["5","2","8","1","7"],"probabilities":[[0.03,0.005,0.0,0.005,0.015,0.585,0.005,0.005,0.01,0.34],[0.0,0.02507,0.905699,0.023846,0.0,0.010192,0.01,0.0,0.02,0.005192],[0.01,0.22,0.02,0.035378,0.05,0.020769,0.02,0.05,0.548383,0.025469],[0.025,0.4875,0.05,0.015,0.082661,0.06,0.13,0.03,0.109839,0.01],[0.005,0.055,0.03,0.150956,0.0375,0.045147,0.005,0.59625,0.055,0.020147]],"model_version":"1","latency_ms":60.908}
+
+=== empty body ===
+HTTP 422
+{"detail":[{"type":"missing","loc":["body","instances"],"msg":"Field required","input":{}}]}
+
+=== missing pixels ===
+HTTP 422
+{"detail":[{"type":"missing","loc":["body","instances",0,"pixels"],"msg":"Field required","input":{}}]}
+
+=== 63 pixels ===
+HTTP 422
+{"detail":[{"type":"too_short","loc":["body","instances",0,"pixels"],"msg":"List should have at least 64 items after validation, not 63","input":[0,0,8,12,14,12,3,0,0,0,12,5,0,3,0,0,0,0,16,2,4,1,0,0,0,4,16,14,12,15,4,0,0,0,4,0,0,8,8,0,0,1,0,0,0,11,5,0,0,6,14,1,2,15,1,0,0,0,8,14,16,4,0],"ctx":{"field_type":"List","min_length":64,"actual_length":63}}]}
+
+=== value 17 ===
+HTTP 422
+{"detail":[{"type":"value_error","loc":["body","instances",0,"pixels"],"msg":"Value error, pixels[0]=17 вне диапазона 0–16","input":[17,0,8,12,14,12,3,0,0,0,12,5,0,3,0,0,0,0,16,2,4,1,0,0,0,4,16,14,12,15,4,0,0,0,4,0,0,8,8,0,0,1,0,0,0,11,5,0,0,6,14,1,2,15,1,0,0,0,8,14,16,4,0,0],"ctx":{"error":{}}}]}
+
+=== negative pixel ===
+HTTP 422
+{"detail":[{"type":"value_error","loc":["body","instances",0,"pixels"],"msg":"Value error, pixels[0]=-1 вне диапазона 0–16","input":[-1,0,8,12,14,12,3,0,0,0,12,5,0,3,0,0,0,0,16,2,4,1,0,0,0,4,16,14,12,15,4,0,0,0,4,0,0,8,8,0,0,1,0,0,0,11,5,0,0,6,14,1,2,15,1,0,0,0,8,14,16,4,0,0],"ctx":{"error":{}}}]}
+
+=== float pixel ===
+HTTP 422
+{"detail":[{"type":"int_from_float","loc":["body","instances",0,"pixels",0],"msg":"Input should be a valid integer, got a number with a fractional part","input":1.5}]}
+
+=== empty instances ===
+HTTP 422
+{"detail":[{"type":"too_short","loc":["body","instances"],"msg":"List should have at least 1 item after validation, not 0","input":[],"ctx":{"field_type":"List","min_length":1,"actual_length":0}}]}
+
+=== 101 instances ===
+HTTP 422
+{"detail":[{"type":"too_long","loc":["body","instances"],"msg":"List should have at most 100 items after validation, not 101","input":[{"pixels":[0,0,8,12,14,12,3,0,0,0,12,5,0,3,0,0,0,0,16,2,4,1,0,0,0,4,16,14,12,15,4,0,0,0,4,0,0,8,8,0,0,1,0,0,0,11,5,0,0,6,14,1,2,15,1,0,0,0,8,14,16,4,0,0]},{"pixels":[0,0,8,12,14,12,3,0,0,0,12,5,0,3,0,0,0,0,16,2,4,1,0,0,0,4,16,14,12,15,4,0,0,0,4,0,0,8,8,0,0,1,0,0,0,11,5,0,0,6,14,1,2,15,1,0,0,0,8,14,16,4,0,0]},{"pixels":[0,0,8,12,14,12,3,0,0,0,12,5,0,3,0,0,0,0,16,2,4,1,0,0,0,4,16,14,12,15,4,0,0,0,4,0,0,8,8,0,0,1,0,0,0,11,5,0,0,6,14,1,2,15,1,0,0,0,8,14,16,4,0,0]},{"pixels":[0,0,8,12,14,12,3,0,0,0,12,5,0,3,0,0,0,0,16,2,4,1,0,0,0,4,16,14,12,15,4,0,0,0,4,0,0,8,8,0,...
+
+LATENCIES [71.546, 57.106, 67.978, 66.829, 57.752]

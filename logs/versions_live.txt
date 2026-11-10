@@ -1,0 +1,6 @@
+python --version
+Python 3.13.2
+.\.venv\Scripts\python.exe -c "import mlflow, sklearn, fastapi; print(mlflow.__version__, sklearn.__version__, fastapi.__version__)"
+3.5.0 1.8.0 0.119.0
+docker version --format "client={{.Client.Version}} server={{.Server.Version}}"
+client=29.9.3 server=29.9.3

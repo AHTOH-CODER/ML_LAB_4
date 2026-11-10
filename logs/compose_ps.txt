@@ -1,0 +1,7 @@
+docker compose ps --format "table {{.Name}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"
+NAME                    IMAGE           STATUS                   PORTS
+ml_lab_4-digits-api-1   digits-api:v1   Up 7 seconds (healthy)   127.0.0.1:8000->8000/tcp
+python src\check_api.py http://127.0.0.1:8000
+HEALTH {'status': 'ok', 'model_version': '1'}
+PREDICTIONS [5, 2, 8, 1, 7]
+CHECK_API_PASS

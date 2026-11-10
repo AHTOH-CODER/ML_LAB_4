@@ -1,0 +1,75 @@
+artifact_path: mlflow-artifacts:/1/models/m-0f4a9c6e445947828db3ff2d875690c4/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.13.2
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.8.0
+is_signature_from_type_hint: false
+mlflow_version: 3.5.0
+model_id: m-0f4a9c6e445947828db3ff2d875690c4
+model_size_bytes: 13298
+model_uuid: m-0f4a9c6e445947828db3ff2d875690c4
+prompts: null
+run_id: a20a38cc738b4964b6f267259bbf423d
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_example.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "double", "name": "pixel_00", "required": true}, {"type": "double",
+    "name": "pixel_01", "required": true}, {"type": "double", "name": "pixel_02",
+    "required": true}, {"type": "double", "name": "pixel_03", "required": true}, {"type":
+    "double", "name": "pixel_04", "required": true}, {"type": "double", "name": "pixel_05",
+    "required": true}, {"type": "double", "name": "pixel_06", "required": true}, {"type":
+    "double", "name": "pixel_07", "required": true}, {"type": "double", "name": "pixel_08",
+    "required": true}, {"type": "double", "name": "pixel_09", "required": true}, {"type":
+    "double", "name": "pixel_10", "required": true}, {"type": "double", "name": "pixel_11",
+    "required": true}, {"type": "double", "name": "pixel_12", "required": true}, {"type":
+    "double", "name": "pixel_13", "required": true}, {"type": "double", "name": "pixel_14",
+    "required": true}, {"type": "double", "name": "pixel_15", "required": true}, {"type":
+    "double", "name": "pixel_16", "required": true}, {"type": "double", "name": "pixel_17",
+    "required": true}, {"type": "double", "name": "pixel_18", "required": true}, {"type":
+    "double", "name": "pixel_19", "required": true}, {"type": "double", "name": "pixel_20",
+    "required": true}, {"type": "double", "name": "pixel_21", "required": true}, {"type":
+    "double", "name": "pixel_22", "required": true}, {"type": "double", "name": "pixel_23",
+    "required": true}, {"type": "double", "name": "pixel_24", "required": true}, {"type":
+    "double", "name": "pixel_25", "required": true}, {"type": "double", "name": "pixel_26",
+    "required": true}, {"type": "double", "name": "pixel_27", "required": true}, {"type":
+    "double", "name": "pixel_28", "required": true}, {"type": "double", "name": "pixel_29",
+    "required": true}, {"type": "double", "name": "pixel_30", "required": true}, {"type":
+    "double", "name": "pixel_31", "required": true}, {"type": "double", "name": "pixel_32",
+    "required": true}, {"type": "double", "name": "pixel_33", "required": true}, {"type":
+    "double", "name": "pixel_34", "required": true}, {"type": "double", "name": "pixel_35",
+    "required": true}, {"type": "double", "name": "pixel_36", "required": true}, {"type":
+    "double", "name": "pixel_37", "required": true}, {"type": "double", "name": "pixel_38",
+    "required": true}, {"type": "double", "name": "pixel_39", "required": true}, {"type":
+    "double", "name": "pixel_40", "required": true}, {"type": "double", "name": "pixel_41",
+    "required": true}, {"type": "double", "name": "pixel_42", "required": true}, {"type":
+    "double", "name": "pixel_43", "required": true}, {"type": "double", "name": "pixel_44",
+    "required": true}, {"type": "double", "name": "pixel_45", "required": true}, {"type":
+    "double", "name": "pixel_46", "required": true}, {"type": "double", "name": "pixel_47",
+    "required": true}, {"type": "double", "name": "pixel_48", "required": true}, {"type":
+    "double", "name": "pixel_49", "required": true}, {"type": "double", "name": "pixel_50",
+    "required": true}, {"type": "double", "name": "pixel_51", "required": true}, {"type":
+    "double", "name": "pixel_52", "required": true}, {"type": "double", "name": "pixel_53",
+    "required": true}, {"type": "double", "name": "pixel_54", "required": true}, {"type":
+    "double", "name": "pixel_55", "required": true}, {"type": "double", "name": "pixel_56",
+    "required": true}, {"type": "double", "name": "pixel_57", "required": true}, {"type":
+    "double", "name": "pixel_58", "required": true}, {"type": "double", "name": "pixel_59",
+    "required": true}, {"type": "double", "name": "pixel_60", "required": true}, {"type":
+    "double", "name": "pixel_61", "required": true}, {"type": "double", "name": "pixel_62",
+    "required": true}, {"type": "double", "name": "pixel_63", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "int64", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2026-11-10 11:57:21.915363'

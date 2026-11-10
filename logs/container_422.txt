@@ -1,0 +1,18 @@
+docker ps --filter name=digits-api
+ml_lab_4-digits-api-1 digits-api:v1 Up 33 minutes (healthy)
+GET /health HTTP 200 {"status":"ok","model_version":"1"}
+POST /predict пустое тело HTTP 422
+POST /predict нет поля pixels HTTP 422
+POST /predict 63 пикселя HTTP 422
+POST /predict значение 17 HTTP 422
+POST /predict значение -1 HTTP 422
+POST /predict дробное значение 1.5 HTTP 422
+POST /predict пустой список instances HTTP 422
+POST /predict 101 объект HTTP 422
+POST /predict sample_request.json HTTP 200 predictions [5, 2, 8, 1, 7] version 1
+python src\check_api.py http://127.0.0.1:8000
+HEALTH {'status': 'ok', 'model_version': '1'}
+PREDICTIONS [5, 2, 8, 1, 7]
+VERSION 1
+LATENCY_MS 161.989
+CHECK_API_PASS

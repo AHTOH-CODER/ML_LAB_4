@@ -1,0 +1,7 @@
+﻿HEALTH {'status': 'ok', 'model_version': '2'}
+METADATA {"model_name": "digits-classifier", "model_version": "2", "run_id": "47f58a4412774abf8a3720ab11895c67", "run_name": "lr-C1", "alias": "champion", "features": ["pixel_00", "pixel_01", "pixel_02", "pixel_03", "pixel_04", "pixel_05", "pixel_06", "pixel_07", "pixel_08", "pixel_09", "pixel_10", "pixel_11", "pixel_12", "pixel_13", "pixel_14", "pixel_15", "pixel_16", "pixel_17", "pixel_18", "pixel_19", "
+PREDICTIONS [5, 2, 8, 8, 7]
+EXPECTED [5, 2, 8, 8, 7]
+VERSION 2
+LATENCY_MS 5.519
+CHECK_API_PASS

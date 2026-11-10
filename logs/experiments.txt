@@ -1,0 +1,112 @@
+python src/train.py --algorithm lr --c 0.01
+{
+  "run_id": "784c9c2f723f41128a2c4a754a29b851",
+  "run_name": "lr-C0.01",
+  "model_uri": "models:/m-c3fe1cef6e154e8c8a00c6f993c8e677",
+  "val_f1_macro": 0.9499635509767226,
+  "val_precision_macro": 0.9518835169202816,
+  "val_recall_macro": 0.9498283998283998,
+  "val_accuracy": 0.95,
+  "train_f1_macro": 0.9525620014429018
+}
+🏃 View run lr-C0.01 at: http://127.0.0.1:5000/#/experiments/1/runs/784c9c2f723f41128a2c4a754a29b851
+🧪 View experiment at: http://127.0.0.1:5000/#/experiments/1
+2026/11/10 18:57:02 INFO mlflow.tracking.fluent: Experiment with name 'lab4-digits' does not exist. Creating a new experiment.
+
+python src/train.py --algorithm lr --c 0.1
+{
+  "run_id": "8fcb8ed6e96546c88fef98340eb246f5",
+  "run_name": "lr-C0.1",
+  "model_uri": "models:/m-97042cadd1464ec2bd2b29b79cf8bb75",
+  "val_f1_macro": 0.9696516769729362,
+  "val_precision_macro": 0.9707946436042411,
+  "val_recall_macro": 0.9693564993564993,
+  "val_accuracy": 0.9694444444444444,
+  "train_f1_macro": 0.9916246815884481
+}
+🏃 View run lr-C0.1 at: http://127.0.0.1:5000/#/experiments/1/runs/8fcb8ed6e96546c88fef98340eb246f5
+🧪 View experiment at: http://127.0.0.1:5000/#/experiments/1
+
+python src/train.py --algorithm lr --c 1
+{
+  "run_id": "28404e9828cb42cea0d05c67c1ef6b0d",
+  "run_name": "lr-C1",
+  "model_uri": "models:/m-8ccb72fcd02d4093add1bf628916aea4",
+  "val_f1_macro": 0.9723752603395079,
+  "val_precision_macro": 0.9731703131703131,
+  "val_recall_macro": 0.9721385671385671,
+  "val_accuracy": 0.9722222222222222,
+  "train_f1_macro": 0.9990564148214087
+}
+🏃 View run lr-C1 at: http://127.0.0.1:5000/#/experiments/1/runs/28404e9828cb42cea0d05c67c1ef6b0d
+🧪 View experiment at: http://127.0.0.1:5000/#/experiments/1
+
+python src/train.py --algorithm lr --c 10
+{
+  "run_id": "a20a38cc738b4964b6f267259bbf423d",
+  "run_name": "lr-C10",
+  "model_uri": "models:/m-0f4a9c6e445947828db3ff2d875690c4",
+  "val_f1_macro": 0.9693513102970946,
+  "val_precision_macro": 0.969644607013028,
+  "val_recall_macro": 0.9693607893607894,
+  "val_accuracy": 0.9694444444444444,
+  "train_f1_macro": 1.0
+}
+🏃 View run lr-C10 at: http://127.0.0.1:5000/#/experiments/1/runs/a20a38cc738b4964b6f267259bbf423d
+🧪 View experiment at: http://127.0.0.1:5000/#/experiments/1
+
+python src/train.py --algorithm rf --trees 50 --depth 3 --min-leaf 1
+{
+  "run_id": "d84c2f5bf0954a0aaaeadf34d62fd96a",
+  "run_name": "rf-50x3-leaf1",
+  "model_uri": "models:/m-c9df0906f9f64692abdd20bdf7ed4014",
+  "val_f1_macro": 0.8366917424336779,
+  "val_precision_macro": 0.84537671100829,
+  "val_recall_macro": 0.8417353067353067,
+  "val_accuracy": 0.8416666666666667,
+  "train_f1_macro": 0.8925065523308255
+}
+🏃 View run rf-50x3-leaf1 at: http://127.0.0.1:5000/#/experiments/1/runs/d84c2f5bf0954a0aaaeadf34d62fd96a
+🧪 View experiment at: http://127.0.0.1:5000/#/experiments/1
+
+python src/train.py --algorithm rf --trees 100 --depth 6 --min-leaf 2
+{
+  "run_id": "2095ed9a1e78458fa7d9bf46931dc062",
+  "run_name": "rf-100x6-leaf2",
+  "model_uri": "models:/m-a8e1fd8a593f461484795d871262520d",
+  "val_f1_macro": 0.9580445474830277,
+  "val_precision_macro": 0.9606033306033307,
+  "val_recall_macro": 0.9582453882453883,
+  "val_accuracy": 0.9583333333333334,
+  "train_f1_macro": 0.9869703017651922
+}
+🏃 View run rf-100x6-leaf2 at: http://127.0.0.1:5000/#/experiments/1/runs/2095ed9a1e78458fa7d9bf46931dc062
+🧪 View experiment at: http://127.0.0.1:5000/#/experiments/1
+
+python src/train.py --algorithm rf --trees 200 --depth 12 --min-leaf 1
+{
+  "run_id": "42dbd7d4c3484e778480dc2a91389acf",
+  "run_name": "rf-200x12-leaf1",
+  "model_uri": "models:/m-35ed20681ac04f078efcdfd8677a1c83",
+  "val_f1_macro": 0.9778577811880445,
+  "val_precision_macro": 0.97905365892208,
+  "val_recall_macro": 0.9775396825396825,
+  "val_accuracy": 0.9777777777777777,
+  "train_f1_macro": 1.0
+}
+🏃 View run rf-200x12-leaf1 at: http://127.0.0.1:5000/#/experiments/1/runs/42dbd7d4c3484e778480dc2a91389acf
+🧪 View experiment at: http://127.0.0.1:5000/#/experiments/1
+
+python src/train.py --algorithm rf --trees 300 --depth 0 --min-leaf 1
+{
+  "run_id": "13ec116323774546bf2eb50e2d22fcef",
+  "run_name": "rf-300x0-leaf1",
+  "model_uri": "models:/m-ddbc86c07469497fb488a657123e8e73",
+  "val_f1_macro": 0.9778583643974457,
+  "val_precision_macro": 0.97905365892208,
+  "val_recall_macro": 0.9776190476190477,
+  "val_accuracy": 0.9777777777777777,
+  "train_f1_macro": 1.0
+}
+🏃 View run rf-300x0-leaf1 at: http://127.0.0.1:5000/#/experiments/1/runs/13ec116323774546bf2eb50e2d22fcef
+🧪 View experiment at: http://127.0.0.1:5000/#/experiments/1
